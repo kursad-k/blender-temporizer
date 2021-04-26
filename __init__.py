@@ -52,10 +52,7 @@ def getFileName():
 
 def saveTempPathFile(fpath, fname):
 
-    print(fname)
-
     finalpath = os.path.join(fpath, fname)
-    print("Full path is", os.path.join(fpath, fname))
 
     bpy.ops.wm.save_as_mainfile(filepath=finalpath, copy=True)
 
@@ -64,10 +61,7 @@ def saveTempPathFile(fpath, fname):
 
 def saveTempPathFileAs(fpath, fname):
 
-    print(fname)
-
     finalpath = os.path.join(fpath, fname)
-    print("Full path is", os.path.join(fpath, fname))
 
     bpy.ops.wm.save_as_mainfile(filepath=finalpath, copy=False)
 
@@ -104,8 +98,6 @@ class WM_OP_Temporizer(bpy.types.Operator):
 
         addon_prefs = user_preferences.addons[__name__].preferences
         info = ("Path: %s" % (addon_prefs.tempfolderpath))
-
-        print("*******************")
 
         if not getFileName():
 
@@ -147,8 +139,6 @@ class WM_OP_Temporizer(bpy.types.Operator):
         scn = context.scene
 
         if getFileName():
-
-            print("scene was already saved")
 
             scn.temporizer_issaved = True
             return self.execute(context)

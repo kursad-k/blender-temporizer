@@ -5,11 +5,6 @@ It is great for making tests and  trials with your opened file, it is also great
 
 You might want to define a cache folder in the settings. Otherwise the add-on just saves to system's temporary folder.
 
-
-You can get it from the link below for free.
-https://gum.co/temporizer
-
-
 Release Notes
 
 v1.1
